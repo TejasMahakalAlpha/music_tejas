@@ -1,0 +1,76 @@
+.page-with-sidebar-layout {
+  display: flex;
+  min-height: 10vh; 
+  background-color: #121212; 
+}
+
+.main-content-area {
+  flex: 1; 
+  padding: 10px;
+  color: white;
+}
+
+
+.create-new-page {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  padding: 20px;
+}
+
+.create-new-page a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  background: #1f1f1f;
+  border-radius: 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  flex: 1 1 calc(25% - 20px);
+  text-align: center;
+}
+
+.create-new-page a:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .page-with-sidebar-layout {
+    flex-direction: column; 
+  }
+
+  .create-new-page a {
+    flex: 1 1 calc(50% - 20px); 
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content-area {
+    padding: 15px;
+  }
+
+  .create-new-page {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .create-new-page a {
+    flex: 1 1 100%; 
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-new-page {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .create-new-page a {
+    padding: 12px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+  }
+}

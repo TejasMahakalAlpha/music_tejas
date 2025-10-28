@@ -1,0 +1,21 @@
+.home-layout {
+  display: flex;
+  background-color: #1e2125;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  /* padding: 20px; */
+  overflow: auto;
+}
+
+@media (max-width: 992px) {
+  .home-layout {
+    display: block; 
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}

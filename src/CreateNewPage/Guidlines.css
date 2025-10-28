@@ -1,0 +1,293 @@
+.page-with-sidebar-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.guidelines-main-content {
+  flex-grow: 1; 
+  background-color: #20202d; 
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  border-radius: 8px; 
+}
+
+
+.content-wrapper {
+  display: flex;
+  gap: 50px; 
+}
+
+.upload-panel,
+.guidelines-panel {
+  flex: 1; 
+}
+
+.artwork-uploader {
+  border: 2px dashed #4a4a5a;
+  border-radius: 8px;
+  padding: 50px;
+  text-align: center;
+  background-color: #2b2b3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.artwork-uploader p {
+  color: #a0a0b0;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+
+.upload-artwork-btn {
+  background-color: #4a4a5a;
+  color: #ffffff;
+  border: 1px solid #6a6a7a;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.upload-artwork-btn:hover {
+  background-color: #5a5a6a;
+}
+
+.upload-audio-btn {
+  background-color: #e53935; 
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.upload-audio-btn:hover {
+  background-color: #c62828;
+}
+
+.guidelines-panel h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ececec;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #4a4a5a;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #a0a0b0;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 3px solid transparent; 
+  margin-right: 20px;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.tab-btn.active {
+  color: #ffffff;
+  border-bottom: 3px solid #e53935; 
+}
+
+.guidelines-content {
+  margin-top: 25px;
+}
+
+.guidelines-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.guidelines-content li {
+  color: #a0a0b0;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.guidelines-content li::before {
+  content: '•';
+  color: #e53935;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.next-btn {
+  background-color: #e53935;
+  color: #ffffff;
+  border: none;
+  padding: 12px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.next-btn:hover {
+  background-color: #c62828;
+}
+
+
+@media (max-width: 1024px) {
+  .page-with-sidebar-layout {
+    flex-direction: column;
+    max-width: 95%;
+    gap: 1rem;
+    margin: 1rem auto;
+  }
+
+  .guidelines-main-content {
+    padding: 1.5rem;
+  }
+
+  .content-wrapper {
+    gap: 20px;
+  }
+
+  .artwork-uploader {
+    padding: 30px;
+  }
+
+  .tab-btn {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    padding: 8px 10px;
+  }
+
+  .guidelines-panel h2 {
+    font-size: 1.3rem;
+  }
+
+  .next-btn {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-with-sidebar-layout {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem;
+  }
+
+  .guidelines-main-content {
+    padding: 1rem;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .artwork-uploader {
+    padding: 20px;
+  }
+
+  .artwork-uploader p {
+    font-size: 0.8rem;
+  }
+
+  .upload-artwork-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .upload-audio-btn {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .guidelines-panel h2 {
+    font-size: 1.2rem;
+  }
+
+  .tab-btn {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  .guidelines-content li {
+    font-size: 0.85rem;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+
+  .next-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .artwork-uploader {
+    padding: 10px;
+  }
+
+  .upload-artwork-btn,
+  .upload-audio-btn {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .guidelines-panel h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .tab-btn {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .next-btn {
+    width: 100%;
+    text-align: center;
+  }
+  /* .next-btn:hover{
+    background-color: red;
+    color:black
+  } */
+  /* .footer-nav:hover{
+    background-color: red;
+    color:black
+  } */
+}

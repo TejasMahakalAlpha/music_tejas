@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --bg-color: #1a1d21;
+  --table-header-bg: #2c2f33;
+  --text-color: #d1d1d1;
+  --border-color: #3a3e44;
+  --primary-accent: #e91e63;
+  --secondary-accent: #2196f3;
+  --input-bg: #25282c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  /* padding: 20px; */
+}
+
+.artists-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.entries-selector select,
+.search-bar input {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin: 0 5px;
+}
+
+.entries-selector select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23d1d1d1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: .65em auto;
+  padding-right: 30px;
+}
+
+.search-bar input {
+  min-width: 200px;
+}
+
+.artists-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.artists-table th,
+.artists-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.artists-table thead {
+  background-color: var(--table-header-bg);
+}
+
+.artists-table th {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.avatar-col {
+  width: 50px;
+}
+
+.artist-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-accent);
+}
+
+.artist-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  border: none;
+  padding: 6px 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+}
+
+.btn-profile {
+  background-color: var(--secondary-accent);
+}
+
+.btn-edit {
+  background-color: var(--primary-accent);
+}
+
+
+@media screen and (max-width: 768px) {
+  /* body, .artists-container {
+    padding: 10px;
+  } */
+
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar label {
+    margin-bottom: 5px;
+  }
+
+  .search-bar input {
+    margin: 0;
+    min-width: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  
+  .artists-table thead {
+    display: none;
+  }
+
+  .artists-table tr {
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .artists-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    white-space: normal;
+    text-align: right;
+  }
+
+  .artists-table tr td:last-child {
+    border-bottom: none;
+  }
+
+  .artists-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    padding-right: 15px;
+    color: var(--text-color);
+  }
+
+  
+  .artists-table td:first-child {
+    justify-content: center;
+    padding-top: 15px;
+  }
+
+  .artists-table td:first-child::before {
+    display: none;
+  }
+
+ 
+  .artists-table td:last-child {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .artists-table td:last-child::before {
+      display: none;
+  }
+  
+  .action-buttons {
+      width: 100%;
+      justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}

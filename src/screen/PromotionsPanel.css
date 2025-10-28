@@ -1,0 +1,257 @@
+
+body {
+  background-color: #124bde;
+  color: #1e293b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+
+.promoted-carousel-page {
+  display: flex;
+  width: 97%;
+ 
+}
+
+
+.promoted-carousel-container {
+  flex: 1;
+  width: 97%;
+  max-width: 1400px;
+  /* margin: 0 auto; */
+  padding: 1.5rem 1rem;
+   margin-left: 25px;
+  margin:25px;
+}
+
+.promoted-carousel-title {
+  font-size: clamp(1.25rem, 5vw, 1.5rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #edf0f5;
+  padding: 0 1.5rem;
+}
+
+
+@keyframes scroll-desktop {
+  0% {
+    transform: translateX(0);
+  }
+  97% {
+    transform: translateX(calc(-366px * 6));
+  }
+}
+
+.promoted-carousel-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+.promoted-carousel-slider::before,
+.promoted-carousel-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.promoted-carousel-slider::before {
+  left: 0;
+  border-radius: 15px;
+  background: linear-gradient(to right, rgba(223, 227, 237, 1) 0%, rgba(223, 227, 237, 0) 100%);
+}
+
+.promoted-carousel-slider::after {
+  right: 0;
+  border-radius: 15px;
+  background: linear-gradient(to left, rgba(223, 227, 237, 1) 0%, rgba(223, 227, 237, 0) 100%);
+}
+
+
+.promoted-carousel-track {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  width: calc(366px * 12);
+  animation: scroll-desktop 40s linear infinite;
+}
+
+.promoted-carousel-slider:hover .promoted-carousel-track {
+  animation-play-state: paused;
+}
+
+
+.promoted-carousel-card {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  position: relative;
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.promoted-carousel-card-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.promoted-carousel-card-content {
+  position: relative;
+  padding: 0.75rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.promoted-carousel-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.promoted-carousel-album-art {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.promoted-carousel-song-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.promoted-carousel-song-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.promoted-carousel-song-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.1rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.promoted-carousel-song-artist {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.promoted-carousel-playlist-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.promoted-carousel-playlist-logo {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.promoted-carousel-playlist-date {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.promoted-carousel-bg-logo {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  transform: translateY(-50%);
+  width: 6rem;
+  height: auto;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.promoted-carousel-pagination {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+
+
+@media (max-width: 1024px) {
+  @keyframes scroll-tablet {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-336px * 6));
+    }
+  }
+  .promoted-carousel-card {
+    width: 320px;
+  }
+  .promoted-carousel-track {
+    width: calc(336px * 12);
+    animation: scroll-tablet 40s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes scroll-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-296px * 6));
+    }
+  }
+  .promoted-carousel-container {
+    padding: 1rem 0;
+  }
+  .promoted-carousel-card {
+    width: 280px;
+  }
+  .promoted-carousel-track {
+    width: calc(296px * 12);
+    animation: scroll-mobile 40s linear infinite;
+  }
+}
+
+
+@media (max-width: 480px) {
+  @keyframes scroll-portrait {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-266px * 6));
+    }
+  }
+  .promoted-carousel-slider::before,
+  .promoted-carousel-slider::after {
+    width: 40px;
+  }
+  .promoted-carousel-card {
+    width: 250px;
+  }
+  .promoted-carousel-track {
+    width: calc(266px * 12);
+    animation: scroll-portrait 40s linear infinite;
+  }
+}

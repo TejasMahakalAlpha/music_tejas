@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.performance-dashboard {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #2b3038;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  background-color: #343a46;
+  border-radius: 8px;
+  padding: 20px;
+  color: #e5e7eb;
+  flex: 1; 
+  min-width: 0; 
+  height: 400px; 
+}
+
+
+.chart-wrapper {
+  position: relative; 
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .performance-dashboard {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .chart-container {
+    height: 350px;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.revenue-component-container {
+  background-color: #343a46;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  color: #d1d5db;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.revenue-data-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.revenue-data-selector label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.revenue-data-selector select {
+  background-color: #3e4451;
+  color: #e5e7eb;
+  border: 1px solid #4b5563;
+  border-radius: 5px;
+  padding: 6px 30px 6px 12px;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-wrapper::after {
+  content: '▾';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.platform-toggle {
+  display: flex;
+  background-color: #2b3038;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  color: #9ca3af;
+  border: none;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.toggle-btn.active {
+  background-color: #f47b20;
+  color: #ffffff;
+}
+
+.btn-export {
+  background-color: #f47b20;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-export:hover {
+  background-color: #d86a1a;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.revenue-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.revenue-table th,
+.revenue-table td {
+  padding: 12px 15px;
+  white-space: nowrap;
+}
+
+.revenue-table th {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid #4a4f5a;
+  vertical-align: top;
+}
+
+.revenue-table th > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: center;
+}
+
+.revenue-table th img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.revenue-table td {
+  font-size: 14px;
+  border-bottom: 1px solid #4a4f5a;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.revenue-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.month-cell {
+  font-weight: 600;
+  color: #ffffff;
+  text-align: left;
+}
+
+.total-cell {
+  text-align: right;
+  padding-right: 25px;
+}
+
+.revenue-table tfoot td {
+  font-weight: 600;
+  color: #ffffff;
+  border-top: 1px solid #4a4f5a;
+}
+
+.data-blue {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.data-green {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.note-box {
+  background-color: #2c303a;
+  border: 1px solid #4a4f5a;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.note-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.note-box strong {
+  color: #e5e7eb;
+}
+
+@media (max-width: 992px) {
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .platform-toggle,
+  .btn-export,
+  .revenue-data-selector {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .revenue-component-container {
+    padding: 15px;
+  }
+  .revenue-table th,
+  .revenue-table td {
+    padding: 10px 12px;
+  }
+  .revenue-table td {
+    font-size: 13px;
+  }
+  .toggle-btn {
+    padding: 6px 12px;
+  }
+  .btn-export {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .revenue-component-container {
+    padding: 10px;
+  }
+  .header-controls {
+    align-items: center;
+  }
+  .revenue-data-selector {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .platform-toggle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .revenue-table th img {
+    width: 32px;
+    height: 32px;
+  }
+  .revenue-table th,
+  .revenue-table td {
+    padding: 8px 10px;
+  }
+  .note-box {
+    padding: 10px;
+  }
+  .note-box p {
+    font-size: 12px;
+  }
+}

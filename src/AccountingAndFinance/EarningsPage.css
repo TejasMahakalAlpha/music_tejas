@@ -1,0 +1,38 @@
+.earnings-page-container {
+  width: 100%;
+}
+
+.tabs {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #3a3a5a;
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  color: #a0a0b0;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.tab:hover {
+    color: #ffffff;
+}
+
+.tab.active {
+  color: #ffffff;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3b82f6;
+}

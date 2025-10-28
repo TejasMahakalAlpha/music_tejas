@@ -1,0 +1,113 @@
+
+body {
+  margin: 0;
+  background: #0f172a; 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e2e8f0;
+}
+
+
+.ticket-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+
+.ticket-card {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.ticket-note {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+
+.ticket-form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.ticket-form input,
+.ticket-form select,
+.ticket-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.ticket-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+
+.info-box {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  background: #0f172a;
+  padding: 1rem;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+
+.submit-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: #2563eb;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+
+@media (max-width: 768px) {
+  .ticket-content {
+    padding: 1rem;
+  }
+  .ticket-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-card {
+    padding: 1rem;
+  }
+  .submit-btn {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
+}

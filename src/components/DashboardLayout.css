@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #20222A;
+  overflow: hidden;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Header {
+  flex-shrink: 0;
+}
+
+.dashboard-body {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.Sidebar {
+  width: 350px;
+  flex-shrink: 0;
+  background-color: #2B2E36;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex-grow: 1;
+  /* padding: 24px 0;  */
+  overflow-y: auto;
+  overflow-x: hidden;
+}

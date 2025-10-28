@@ -1,0 +1,284 @@
+.page-with-sidebar-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.songdetails-main-content {
+  flex-grow: 1;
+  background-color: #20202d;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.upload-panel,
+.form-panel {
+  flex: 1;
+}
+
+.artwork-uploader {
+  border: 2px dashed #4a4a5a;
+  border-radius: 8px;
+  padding: 50px;
+  text-align: center;
+  background-color: #2b2b3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.artwork-uploader p {
+  color: #a0a0b0;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+
+.upload-artwork-btn {
+  background-color: #4a4a5a;
+  color: #ffffff;
+  border: 1px solid #6a6a7a;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.upload-artwork-btn:hover {
+  background-color: #5a5a6a;
+}
+
+.upload-audio-btn {
+  background-color: #e53935;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.upload-audio-btn:hover {
+  background-color: #c62828;
+}
+
+.artist-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.label-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.form-label {
+  color: #ececec;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.add-btn {
+  background: none;
+  border: none;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.required-text {
+  color: #e53935;
+  font-size: 0.75rem;
+  margin: 0 0 8px 0;
+}
+
+.custom-select {
+  background-color: #3a3a4a;
+  color: #a0a0b0;
+  border: 1px solid #5a5a6a;
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  font-size: 0.9rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23a0a0b0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.featured-artist-group {
+  margin-top: 8px;
+}
+
+.form-label-light {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #a0a0b0;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #5a5a6a;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-label input[type="radio"]:checked + .custom-radio::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #e53935;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #4a4a5a;
+}
+
+.back-btn,
+.next-btn {
+  border: none;
+  padding: 12px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.back-btn {
+  background-color: #3a3a4a;
+  color: #ffffff;
+}
+.back-btn:hover {
+  background-color: #4a4a5a;
+}
+
+.next-btn {
+  background-color: #e53935;
+  color: #ffffff;
+}
+.next-btn:hover {
+  background-color: #c62828;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .page-with-sidebar-layout {
+    gap: 1.5rem;
+    max-width: 95%;
+    margin: 1.5rem auto;
+  }
+  .content-wrapper {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-with-sidebar-layout {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .songdetails-main-content {
+    padding: 1.5rem;
+  }
+  .content-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .artist-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-nav {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .back-btn,
+  .next-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .songdetails-main-content {
+    padding: 1rem;
+  }
+  .artwork-uploader {
+    padding: 30px;
+  }
+  .form-label {
+    font-size: 0.85rem;
+  }
+  .custom-select {
+    font-size: 0.9rem;
+  }
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

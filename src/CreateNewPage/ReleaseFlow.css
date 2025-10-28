@@ -1,0 +1,221 @@
+:root {
+    --background-color: #1a1a1d; 
+    --container-bg-color: #2c2c34; 
+    --primary-red: #e50914;
+    --text-color: #f5f5f5;
+    --text-secondary-color: #a0a0a0;
+    --input-bg-color: #3b3b44;
+    --border-color: #444;
+}
+
+.page-with-sidebar-layout {
+    display: flex;
+    gap: 2rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.release-flow-container {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: var(--container-bg-color);
+    border-radius: 8px;
+}
+
+.release-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.release-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-red);
+    color: white;
+    font-weight: 100;
+}
+
+.btn-primary:hover {
+    background-color: #c40812;
+}
+
+.releases-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.releases-table th {
+    color: var(--text-secondary-color);
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.releases-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.releases-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+
+.status-badge.released {
+    background-color: #28a745;
+}
+
+.status-badge.review {
+    background-color: #ffc107;
+    color: #1a1a1d;
+}
+
+.status-badge.draft {
+    background-color: #6c757d;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-action {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.btn-action.edit:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-action.delete:hover {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+    color: #fff;
+}
+
+
+
+@media (max-width: 1024px) {
+    .page-with-sidebar-layout {
+        gap: 1.5rem;
+        max-width: 95%;
+        margin: 1.5rem auto;
+    }
+    .release-header h1 {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 992px) {
+    .main-content {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-with-sidebar-layout {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .release-flow-container {
+        padding: 1.5rem;
+    }
+
+    .release-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .btn-primary {
+       width: 100%;
+    }
+
+   
+    .releases-table {
+        border: none;
+    }
+
+    .releases-table thead {
+        display: none;
+    }
+
+    .releases-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+    
+    .releases-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 0.5rem;
+        border-bottom: 1px dotted var(--border-color);
+        text-align: right;
+    }
+
+    .releases-table tr td:last-child {
+        border-bottom: none;
+    }
+
+    .releases-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--text-secondary-color);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        text-align: left;
+        margin-right: 1rem;
+    }
+
+    .action-buttons {
+        justify-content: flex-end;
+    }
+}

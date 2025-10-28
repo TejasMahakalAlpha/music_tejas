@@ -1,0 +1,9 @@
+import React from 'react'
+
+function CustomPurchase() {
+  return (
+    <div> 4 CustomPurchase Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia ab esse aperiam, impedit eveniet tempore! Sunt nostrum incidunt odio quos ullam dolor aliquam magni accusamus, nam vero quaerat beatae id optio, temporibus, excepturi ab aspernatur vel! Blanditiis fugiat odio vero quae provident inventore architecto numquam! Eum, praesentium iure velit soluta quam molestias consequuntur rerum blanditiis sapiente veritatis, doloribus aliquam quae sequi asperiores, illum maiores ipsam modi reiciendis. Explicabo repellat repudiandae, id repellendus quae aut harum laborum obcaecati assumenda unde. Aliquid veniam illo itaque quisquam ratione totam, doloremque id distinctio atque nesciunt quidem corporis ipsum animi, amet quae enim harum. Quod, omnis nesciunt ex eum odio, reiciendis perferendis sunt illum dolor incidunt assumenda atque, illo quis enim? Facilis odio sint eius officia natus exercitationem quaerat, iure aperiam excepturi voluptate labore eaque dolorum dolorem necessitatibus distinctio consectetur pariatur esse veritatis repudiandae temporibus perspiciatis repellendus? Dicta rem officiis porro ad quaerat enim deserunt id quis et. Unde libero quidem adipisci accusantium, deleniti culpa hic quos veniam sed ducimus, consequatur eligendi quaerat fugit est harum quas a reprehenderit rerum maxime dolor! Rem error ducimus quod magnam eum culpa debitis quia vitae. Tenetur impedit quam excepturi provident iusto corporis architecto? Consequatur, repudiandae quod.</div>
+  )
+}
+
+export default CustomPurchase
