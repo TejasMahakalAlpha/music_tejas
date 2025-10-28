@@ -26,13 +26,10 @@ import ReleaseFlow from './CreateNewPage/ReleaseFlow';
 import CreateTicket from './CreateTicket/CreateTicket'
 
 // Sidebar My Music Business
-// import MyMusicBusiness from './MyMusicBusiness/MyMusicBusiness';
-// import AllReleases from "./MyMusicBusiness/AllReleases";
-// import Labels from "./MyMusicBusiness/Labels";
-// import MyArtists from "./MyMusicBusiness/MyArtists";
-import AllReleases from "./MyMusicBusiness/AllReleases.jsx";
-import Labels from "./MyMusicBusiness/Labels.jsx";
-import MyArtists from "./MyMusicBusiness/MyArtists.jsx";
+import AllReleases from "./MyMusicBusiness/AllReleases";
+import Labels from "./MyMusicBusiness/Labels";
+import MyArtists from "./MyMusicBusiness/MyArtists";
+
 
 // Analytics
 import Analytics from "./Analytics/Analytics";
