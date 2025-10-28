@@ -27,9 +27,9 @@ import CreateTicket from './CreateTicket/CreateTicket'
 
 // Sidebar My Music Business
 // import MyMusicBusiness from './MyMusicBusiness/MyMusicBusiness';
-import AllReleases from "../src/MyMusicBusiness/AllReleases";
-import Labels from "../src/MyMusicBusiness/Labels";
-import MyArtists from "../src/MyMusicBusiness/MyArtists";
+import AllReleases from "./MyMusicBusiness/AllReleases";
+import Labels from "./MyMusicBusiness/Labels";
+import MyArtists from "./MyMusicBusiness/MyArtists";
 // Analytics
 import Analytics from "./Analytics/Analytics";
 import TotalRevenue from './Analytics/TotalRevenue';
