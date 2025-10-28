@@ -25,10 +25,11 @@ import SelectPlatform from './CreateNewPage/SelectPlatform.jsx';
 import ReleaseFlow from './CreateNewPage/ReleaseFlow.jsx';
 import CreateTicket from './CreateTicket/CreateTicket.jsx';
 
+
 // Sidebar My Music Business
 import AllReleases from "./MyMusicBusiness/AllReleases.jsx";
 import Labels from "./MyMusicBusiness/Labels.jsx";
-import MyArtists from "./MyMusicBusiness/MyArtists.jsx";
+import MyArtists from "./MyMusicBusiness/myArtists.jsx";
 
 // Analytics
 import Analytics from "./Analytics/Analytics.jsx";

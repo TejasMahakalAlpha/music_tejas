@@ -1,6 +1,0 @@
-staticSites:
-  - # Service definition
-    # The build command to run
-    buildCommand: "npm install && npm run build"
-    # The directory to publish
-    publishDir: "dist"
