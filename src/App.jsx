@@ -3,66 +3,69 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { useSelector } from 'react-redux';
 import './App.css'; 
 
-import DashboardLayout from "../src/components/DashboardLayout"; 
+// FIX 1: Path ko ../src/ se ./ kar diya aur .jsx add kiya
+import DashboardLayout from "./components/DashboardLayout.jsx"; 
 
-import Home from './pages/Home';
-// import SignUp from './components/SignUp';
-// import Login from './components/Login';
-// signup, login , reset password and forgot password change from signup and login page
-import Signup_Login from './components/Signup_Login';
-import UserProfile from './components/UserProfile';
-import Logout from './components/Logout';
+// FIX 2: Sabhi components mein .jsx extension add kiya
+import Home from './pages/Home.jsx';
+import Signup_Login from './components/Signup_Login.jsx';
+import UserProfile from './components/UserProfile.jsx';
+import Logout from './components/Logout.jsx';
+
 // Sidebar Create New Release 
-import CreateNewPage from "./CreateNewPage/CreateNewPage"
-import ReleasesPanel from './screen/ReleasesPanel';
-import PramotionsPanel from './screen/PramotionsPanel';
-import AnalyticsPanel from './screen/AnalyticsPanel';
-import Guidlines from './CreateNewPage/Guidlines';
-import AddArtistDetails from './CreateNewPage/AddArtistDetails';
-import ReleaseDateDetails from './CreateNewPage/ReleaseDateDetails';
-import SongDetails from './CreateNewPage/SongDetails';
-import SelectPlatform from './CreateNewPage/SelectPlatform';
-import ReleaseFlow from './CreateNewPage/ReleaseFlow';
-import CreateTicket from './CreateTicket/CreateTicket'
+import CreateNewPage from "./CreateNewPage/CreateNewPage.jsx";
+import ReleasesPanel from './screen/ReleasesPanel.jsx';
+import PramotionsPanel from './screen/PramotionsPanel.jsx';
+import AnalyticsPanel from './screen/AnalyticsPanel.jsx';
+import Guidlines from './CreateNewPage/Guidlines.jsx';
+import AddArtistDetails from './CreateNewPage/AddArtistDetails.jsx';
+import ReleaseDateDetails from './CreateNewPage/ReleaseDateDetails.jsx';
+import SongDetails from './CreateNewPage/SongDetails.jsx';
+import SelectPlatform from './CreateNewPage/SelectPlatform.jsx';
+import ReleaseFlow from './CreateNewPage/ReleaseFlow.jsx';
+import CreateTicket from './CreateTicket/CreateTicket.jsx';
 
 // Sidebar My Music Business
-import AllReleases from "./MyMusicBusiness/AllReleases";
-import Labels from "./MyMusicBusiness/Labels";
-import MyArtists from "./MyMusicBusiness/MyArtists";
-
+import AllReleases from "./MyMusicBusiness/AllReleases.jsx";
+import Labels from "./MyMusicBusiness/Labels.jsx";
+import MyArtists from "./MyMusicBusiness/MyArtists.jsx";
 
 // Analytics
-import Analytics from "./Analytics/Analytics";
-import TotalRevenue from './Analytics/TotalRevenue';
-import ProductPerformanceBreakdown from './Analytics/ProductPerformanceBreakdown';
-import MonthlyRevenueTrend from './Analytics/MonthlyRevenueTrend';
-import FacebookAnalytics from './Analytics/FacebookAnalytics';
-import SpotifyAnalytics from './Analytics/SpotifyAnalytics';
-// Earnings
-import MonthWiseEarnings from './Earnings/MonthWiseEarnings';
-// AccountingAndFinance
-import AccountingAndFinance from './AccountingAndFinance/EarningsPage';
-import EarningsPage from './AccountingAndFinance/EarningsPage';
-import EarningPaidToYou from './AccountingAndFinance/EarningPaidToYou';
-import MyBanks from './AccountingAndFinance/MyBanks';
-import PurchaseHistory from './AccountingAndFinance/PurchaseHistory';
-// Promotions
-import Promotions from "./Promotions/Promotions";
-// YoutubeService
-import YoutubeService from './YoutubeService/YoutubeService';
-import ClaimHistroy from './YoutubeService/ClaimHistroy';
-import RemoveYoutubeClaim from './YoutubeService/RemoveYoutubeClaim';
+import Analytics from "./Analytics/Analytics.jsx";
+import TotalRevenue from './Analytics/TotalRevenue.jsx';
+import ProductPerformanceBreakdown from './Analytics/ProductPerformanceBreakdown.jsx';
+import MonthlyRevenueTrend from './Analytics/MonthlyRevenueTrend.jsx';
+import FacebookAnalytics from './Analytics/FacebookAnalytics.jsx';
+import SpotifyAnalytics from './Analytics/SpotifyAnalytics.jsx';
 
+// Earnings
+import MonthWiseEarnings from './Earnings/MonthWiseEarnings.jsx';
+
+// AccountingAndFinance
+import AccountingAndFinance from './AccountingAndFinance/EarningsPage.jsx';
+import EarningsPage from './AccountingAndFinance/EarningsPage.jsx';
+import EarningPaidToYou from './AccountingAndFinance/EarningPaidToYou.jsx';
+import MyBanks from './AccountingAndFinance/MyBanks.jsx';
+import PurchaseHistory from './AccountingAndFinance/PurchaseHistory.jsx';
+
+// Promotions
+import Promotions from "./Promotions/Promotions.jsx";
+
+// YoutubeService
+import YoutubeService from './YoutubeService/YoutubeService.jsx';
+import ClaimHistroy from './YoutubeService/ClaimHistroy.jsx';
+import RemoveYoutubeClaim from './YoutubeService/RemoveYoutubeClaim.jsx';
 
 // HelpAndSupport
-import HelpAndSupport from './HelpAndSupport/HelpAndSupport';
-import HSCreateTicket from './HelpAndSupport/HSCreateTicket';
-import FAQ from './HelpAndSupport/FAQ';
+import HelpAndSupport from './HelpAndSupport/HelpAndSupport.jsx';
+import HSCreateTicket from './HelpAndSupport/HSCreateTicket.jsx';
+import FAQ from './HelpAndSupport/FAQ.jsx';
 
 // CustomPurchase
-import CustomPurchase from './CustomPurchase/CustomPurchase'
+import CustomPurchase from './CustomPurchase/CustomPurchase.jsx';
+
 // CustomPayment
-import CustomPayment from "./CustomPayment/CustomPayment";
+import CustomPayment from "./CustomPayment/CustomPayment.jsx";
 
 
 // *************************************************************************************************
@@ -95,7 +98,7 @@ function App() {
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path='/Signup_Login' element={<Signup_Login/>} /> */}
 
-        {/*  this route only see ,when userr not login  */}
+        {/* this route only see ,when userr not login  */}
         <Route 
           path='/Signup_Login' 
           element={
@@ -165,12 +168,10 @@ function App() {
           <Route path='ClaimHistroy' element={<ClaimHistroy/>}/>
           <Route path='RemoveYoutubeClaim' element={<RemoveYoutubeClaim/>} />
 
-
           {/* HelpAndSupport */} 
           <Route path="HelpAndSupport" element={<HelpAndSupport/>} />
           <Route path='HSCreateTicket' element={<HSCreateTicket/>} />
-           <Route path='FAQ' element={<FAQ/>} />
-
+          <Route path='FAQ' element={<FAQ/>} />
 
           {/* CustomPurchase */}
           <Route path="CustomPurchase" element={<CustomPurchase/>} />
