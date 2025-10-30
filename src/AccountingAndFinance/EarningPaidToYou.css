@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2d;
+  color: #f0f0f0;
+}
+
 .earnings-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto; 
+  box-sizing: border-box; 
+  padding: 24px;
   background-color: #1e1e2d;
   border-radius: 8px;
-  padding: 24px;
   border: 1px solid #3a3a5a;
 }
 
@@ -13,6 +25,7 @@
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .entries-control, .search-control {
@@ -56,4 +69,46 @@
 .earnings-table td {
   font-size: 14px;
   border-bottom: 1px solid #2c2c3e;
+}
+
+@media (max-width: 1024px) {
+  .earnings-container {
+    margin: 20px auto; 
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .earnings-container {
+    margin: 15px 10px;
+    padding: 15px;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .entries-control, .search-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .entries-control select, .search-control input {
+    flex-grow: 1;
+    max-width: 70%;
+  }
+
+  .earnings-table th, .earnings-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .earnings-container {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 0;
+  }
 }

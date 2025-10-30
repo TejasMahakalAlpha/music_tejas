@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .performance-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto; 
+  padding: 20px;
+  box-sizing: border-box; 
   display: flex;
   gap: 20px;
-  padding: 20px;
   background-color: #2b3038;
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap;
@@ -19,21 +28,59 @@
   height: 400px; 
 }
 
+.chart-container h1 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
 
 .chart-wrapper {
   position: relative; 
-  height: 100%;
+  height: calc(100% - 40px); 
   width: 100%;
+}
+
+
+@media (max-width: 1240px) {
+  .performance-dashboard {
+    margin: 25px auto;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .performance-dashboard {
+    flex-direction: column;
+    margin: 20px 15px; 
+    padding: 15px;
+  }
 }
 
 @media (max-width: 768px) {
   .performance-dashboard {
     flex-direction: column;
+    margin: 15px 10px; 
     padding: 10px;
   }
   
   .chart-container {
     height: 350px;
     padding: 15px;
+  }
+
+  .chart-container h1 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .performance-dashboard {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 0;
+  }
+  .chart-container {
+    padding: 10px;
   }
 }

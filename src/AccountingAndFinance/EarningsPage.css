@@ -1,10 +1,15 @@
 .earnings-page-container {
   width: 100%;
+  max-width: 1200px; 
+  margin: 30px auto; 
+  box-sizing: border-box; 
+  padding: 0 15px; 
 }
 
 .tabs {
   margin-bottom: 24px;
   border-bottom: 1px solid #3a3a5a;
+  padding: 0 5px; 
 }
 
 .tab {
@@ -17,6 +22,7 @@
   font-weight: 500;
   position: relative;
   transition: color 0.2s;
+  white-space: nowrap; 
 }
 
 .tab:hover {
@@ -35,4 +41,29 @@
   right: 0;
   height: 2px;
   background-color: #3b82f6;
+}
+
+@media (max-width: 992px) {
+  .earnings-page-container {
+    margin: 20px auto; 
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .earnings-page-container {
+    margin: 15px 10px;
+    padding: 0; 
+  }
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .earnings-page-container {
+    margin: 10px 0;
+  }
 }

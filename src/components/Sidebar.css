@@ -56,15 +56,30 @@ body.no-scroll-when-sidebar-open {
   background-color: #c0392b;
 }
 
+/* --- SCROLL FIX & SCROLLBAR HIDING APPLIED HERE --- */
 .fr-sidebar-nav {
   flex-grow: 1;
-  overflow: hidden;
+  /* Keeps the scrolling functionality enabled */
+  overflow-y: scroll; 
+  overflow-x: hidden;
+
+  /* Hides scrollbar for IE and Edge */
+  -ms-overflow-style: none;
+  /* Hides scrollbar for Firefox */
+  scrollbar-width: none;  
 }
+
+/* Hides scrollbar for Chrome, Safari, and other WebKit browsers */
+.fr-sidebar-nav::-webkit-scrollbar {
+  display: none; 
+}
+/* ---------------------------------------------------- */
 
 .fr-sidebar-nav-menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%; 
 }
 
 .fr-sidebar-nav-item {
@@ -116,7 +131,6 @@ body.no-scroll-when-sidebar-open {
 .fr-sidebar-hamburger span {
   width: 24px;
   height: 3px;
-  /* top:100px; */
   background-color: #ffffff;
   border-radius: 3px;
 }
@@ -221,17 +235,16 @@ body.no-scroll-when-sidebar-open {
 }
 
 
-
 .fr-sidebar-nav-item .fr-sidebar-nav-link[onclick] {
   cursor: pointer;
 }
- 
+  
 
 .fr-sidebar-nav-item.active > .fr-sidebar-nav-link .fr-sidebar-arrow {
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
- 
+  
 .fr-sidebar-submenu {
   list-style: none;
   padding-left: 15px;
@@ -240,13 +253,13 @@ body.no-scroll-when-sidebar-open {
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
- 
+  
 
 .fr-sidebar-nav-item.active .fr-sidebar-submenu {
   max-height: 200px; 
   margin-top: 5px;
 }
- 
+  
 
 .fr-sidebar-submenu-link {
   display: block;
@@ -258,9 +271,8 @@ body.no-scroll-when-sidebar-open {
   transition: background-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
- 
+  
 .fr-sidebar-submenu-link:hover {
   background-color: #3b4654;
   color: #ffffff;
 }
- 

@@ -7,28 +7,29 @@
   --danger-red: #e74c3c;
   --input-bg: #3b4654;
 }
- 
+
 body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
-
 }
- 
+
 .mylabels-page-container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 50px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
- 
+
 .mylabels-card {
   background-color: var(--card-dark);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
 }
- 
+
 .mylabels-header {
   display: flex;
   justify-content: space-between;
@@ -37,67 +38,69 @@ body {
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
- 
+
 .show-entries {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--text-secondary);
 }
- 
-.entries-dropdown, .search-input {
+
+.entries-dropdown,
+.search-input {
   background-color: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: 6px;
   color: var(--text-primary);
   padding: 0.5rem;
 }
- 
+
 .search-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--text-secondary);
 }
- 
+
 .table-wrapper {
   overflow-x: auto;
 }
- 
+
 .labels-table {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid var(--border-color);
 }
- 
-.labels-table th, .labels-table td {
+
+.labels-table th,
+.labels-table td {
   padding: 1rem;
   text-align: left;
   vertical-align: middle;
   border: 1px solid var(--border-color);
 }
- 
+
 .labels-table thead {
   background-color: #3b4654;
 }
- 
+
 .labels-table th {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-secondary);
   text-transform: uppercase;
 }
- 
+
 .labels-table td {
   color: var(--text-primary);
 }
- 
+
 .expand-icon {
   cursor: pointer;
   color: var(--text-secondary);
   text-align: center;
 }
- 
+
 .edit-profile-btn {
   background-color: var(--danger-red);
   color: #fff;
@@ -109,11 +112,11 @@ body {
   transition: background-color 0.2s ease;
   width: 100%;
 }
- 
+
 .edit-profile-btn:hover {
   background-color: #c0392b;
 }
- 
+
 .mylabels-footer {
   display: flex;
   justify-content: space-between;
@@ -123,11 +126,11 @@ body {
   margin-top: 1.5rem;
   color: var(--text-secondary);
 }
- 
+
 .pagination-controls {
   display: flex;
 }
- 
+
 .pagination-btn {
   background-color: transparent;
   border: 1px solid var(--border-color);
@@ -136,42 +139,60 @@ body {
   cursor: pointer;
   border-left-width: 0;
 }
- 
+
 .pagination-btn:first-child {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-left-width: 1px;
 }
- 
+
 .pagination-btn:last-child {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
- 
-.pagination-btn.active, .pagination-btn:hover {
+
+.pagination-btn.active,
+.pagination-btn:hover {
   background-color: var(--input-bg);
   color: var(--text-primary);
 }
- 
+
 .pagination-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
- 
+
+@media (max-width: 1240px) {
+  .mylabels-page-container {
+    margin: 25px auto;
+    padding: 0 20px;
+  }
+}
+
 @media (max-width: 992px) {
+  .mylabels-page-container {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
   .labels-table thead {
     display: none;
   }
-  .labels-table tbody, .labels-table tr, .labels-table td {
+
+  .labels-table tbody,
+  .labels-table tr,
+  .labels-table td {
     display: block;
     width: 100%;
     box-sizing: border-box;
   }
+
   .labels-table tr {
     margin-bottom: 1rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
   }
+
   .labels-table td {
     display: flex;
     justify-content: space-between;
@@ -181,9 +202,11 @@ body {
     border: none;
     border-bottom: 1px solid var(--border-color);
   }
+
   .labels-table tr td:last-child {
     border-bottom: none;
   }
+
   .labels-table td::before {
     content: attr(data-label);
     float: left;
@@ -191,30 +214,40 @@ body {
     color: var(--text-secondary);
     text-transform: uppercase;
   }
+
   .expand-icon {
     justify-content: center !important;
   }
 }
- 
+
 @media (max-width: 768px) {
-  .mylabels-card {
-    padding: 1rem;
+  .mylabels-page-container {
+    margin: 15px 0;
+    padding: 0;
   }
-  .mylabels-header, .mylabels-footer {
+
+  .mylabels-card {
+    padding: 1rem 1rem;
+  }
+
+  .mylabels-header,
+  .mylabels-footer {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
   }
-  .search-container{
+
+  .search-container {
     width: 100%;
   }
-  .search-input{
+
+  .search-input {
     width: 100%;
     box-sizing: border-box;
   }
+
   .pagination-controls {
     width: 100%;
     justify-content: center;
   }
 }
- 

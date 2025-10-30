@@ -2,14 +2,19 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  /* background-color: #12121a; */
   color: #f0f0f0;
-  /* padding: 2rem; */
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2d;
 }
 
 .ticket-page-container {
+  /* MAIN CHANGE: Margin & Center Alignment */
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
+  box-sizing: border-box; 
+  padding: 0 15px;
 }
 
 .ticket-form {
@@ -132,7 +137,39 @@ body {
   text-decoration: underline;
 }
 
+/* RESPONSIVENESS */
+@media (max-width: 1240px) {
+  .ticket-page-container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ticket-page-container {
+    margin: 20px auto; 
+    padding: 0 10px;
+  }
+}
+
 @media (max-width: 768px) {
+  .ticket-page-container {
+    margin: 15px 0;
+    padding: 0;
+  }
+  
+  .ticket-form {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: 20px 15px;
+  }
+  
+  .ticket-list-container {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
   .ticket-list-header {
     display: none;
   }
@@ -140,11 +177,15 @@ body {
   .ticket-item {
     grid-template-columns: 1fr;
     gap: 12px;
-    padding: 20px;
+    padding: 20px 15px;
   }
 
+  .ticket-issue::before { content: "Issue"; }
+  .ticket-status::before { content: "Ticket Status"; }
+  .ticket-date::before { content: "Date"; }
+  .ticket-action::before { content: "Action"; }
+
   .ticket-issue::before, .ticket-status::before, .ticket-date::before, .ticket-action::before {
-    content: attr(data-label);
     font-weight: 600;
     color: #a0a0b0;
     font-size: 12px;
@@ -166,4 +207,13 @@ body {
       "date"
       "action";
   }
+}
+
+@media (max-width: 480px) {
+    .ticket-form {
+        padding: 15px 10px;
+    }
+    .ticket-item {
+        padding: 15px 10px;
+    }
 }

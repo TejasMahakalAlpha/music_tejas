@@ -6,7 +6,7 @@ const MyBanks = () => {
   const bankDetails = {
     bankName: 'Kotak Mahindra Bank',
     branchName: 'Pune Branch',
-    accountHolderName: 'Tejas Mahakal',
+    accountHolderName: 'Mukesh Ambani',
     accountNumber: '**** **** **** 1234',
     accountType: 'Savings',
     ifscCode: 'KKBK0001234',
